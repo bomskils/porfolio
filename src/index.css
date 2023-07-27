@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "poppins";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "poppins-extrabold";
+  src: url("./fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "poppins-light";
+  src: url("./fonts/Poppins-Light.ttf");
+}
+
+html, body {
+  font-family: "poppins";
+}
+
+.profile-image {
+  background: linear-gradient(180deg, #e70faa 0%, #00c0fd 100%);
+}
+
+.hero {
+  height: calc(70svh - 1.5rem);
+}
+
+.name {
+  background: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%),
+    linear-gradient(0deg, #42446e, #42446e);
+  background-clip: text;
+  text-fill-color: transparent;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
