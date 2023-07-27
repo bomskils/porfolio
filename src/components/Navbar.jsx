@@ -12,7 +12,7 @@ const Navbar = () => {
         <img src={Logo} alt="" className="w-20"/>
       </div>
       <ul className="flex items-center gap-5">
-        <Anchor
+        {/* <Anchor
           direction="horizontal"
           className="hidden md:block"
           items={[
@@ -42,7 +42,7 @@ const Navbar = () => {
               key: "5",
             },
           ]}
-        />
+        /> */}
         <div className="items-center gap-3 hidden md:flex">
           <img
             src={GitHub}

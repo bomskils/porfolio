@@ -3,7 +3,7 @@ import ProfileImage from "../images/profile.jpg";
 
 const Hero = () => {
   return (
-    <div className="grid md:grid-cols-2 mt-36 hero" id="home">
+    <div className="grid md:grid-cols-2 mt-14 lg:mt-36 hero" id="home" data-aos="fade-up">
       <section className="text-[2.6rem] lg:text-[3.6rem] font-bold text-[#42446E] font-[poppins-extrabold]">
         Hi 👋, <br /> My name is <br />
         <span className="name">Boma Da-ala</span><br />I build things for web

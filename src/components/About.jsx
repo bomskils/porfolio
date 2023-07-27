@@ -5,7 +5,7 @@ import calendar from "../images/calendar.svg";
 
 const About = () => {
   return (
-    <div className="lg:w-[60%] mt-44" id="about">
+    <div className="lg:w-[60%] mt-44" id="about" data-aos="fade-up" data-aos-anchor="#about">
       <div>
         <h1 className="text-[#42446E] text-[2.6rem] font-bold font-[poppins-extrabold]">
           About me

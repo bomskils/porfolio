@@ -12,7 +12,7 @@ const Stack = () => {
   const images = [git, html, css, js, github, tailwind, react, redux, vs];
 
   return (
-    <div className="mt-20 lg:mt-44" id="tech-stack">
+    <div className="mt-20 lg:mt-44" id="tech-stack" data-aos="fade-up">
       <h1 className="text-[#42446E] text-[2.6rem] font-bold font-[poppins-extrabold]">
         My Tech Stack
       </h1>
@@ -21,8 +21,8 @@ const Stack = () => {
         Technologies I’ve been working with recently
       </p>
       <div className="mx-auto w-[70%] grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-20 lg:mt-48 gap-20">
-        {images.map((image) => (
-          <img src={image} alt="" />
+        {images.map((image, index) => (
+          <img key={index} src={image} alt="" />
         ))}
       </div>
     </div>
