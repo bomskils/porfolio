@@ -57,7 +57,7 @@ const Project = () => {
     },
   ];
   return (
-    <div className="mt-20 lg:mt-44" id="project" data-aos="fade-up">
+    <div className="mt-20 lg:mt-44" id="project">
       <h1 className="text-[#42446E] text-[2.6rem] font-bold font-[poppins-extrabold]">
         Projects
       </h1>
@@ -65,9 +65,23 @@ const Project = () => {
         {" "}
         Things I’ve built so far
       </p>
-      <Row gutter={16} className="mt-36">
+      <Row
+        gutter={{
+          xs: 0,
+          xl: 16,
+        }}
+        className="mt-36"
+      >
         {projects.map((project, index) => (
-          <Col key={index} xs={24} md={12} lg={8} className="mb-10">
+          <Col
+            key={index}
+            xs={24}
+            md={12}
+            lg={8}
+            className="mb-10"
+            data-aos="zoom-in-down"
+            data-aos-duration="2000"
+          >
             <Card
               hoverable
               style={{ width: 350 }}

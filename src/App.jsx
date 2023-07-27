@@ -7,11 +7,12 @@ import Stack from "./components/stack";
 import Project from "./components/project";
 import Contact from "./components/contact";
 import Aos from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
+import { FloatButton } from "antd";
 
 const App = () => {
   useEffect(() => {
-    Aos.init({duration: 2000});
+    Aos.init();
   }, []);
 
   return (
@@ -21,19 +22,22 @@ const App = () => {
         components: {
           Anchor: {
             fontSize: 17,
-            // lineWidthBold: 0
+            lineType: "",
+            padding: 50,
+            paddingXXS: 20,
           },
         },
       }}
     >
-      <div className="px-5 xl:px-48 min-h-[100svh]" data-aos="fade-up">
-        <Navbar />
+      <Navbar />
+      <div className="px-5 xl:px-48 min-h-[100svh] mt-36" data-aos="fade-up">
         <Hero />
         <About />
         <Stack />
         <Project />
         <Contact />
       </div>
+      <FloatButton.BackTop />
     </ConfigProvider>
   );
 };

@@ -4,8 +4,61 @@ import office from "../images/office.svg";
 import calendar from "../images/calendar.svg";
 
 const About = () => {
+  const experience = [
+    {
+      role: "Junior Developer",
+      company: "Nestar Global",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+    {
+      role: "Junior Developer",
+      company: "Nestar Global",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+    {
+      role: "Junior Developer",
+      company: "Nestar Global",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+  ];
+
+  const education = [
+    {
+      course: "M.A. Internation law and diplomacy",
+      school: " University of Lagos",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+    {
+      course: "M.A. Internation law and diplomacy",
+      school: " University of Lagos",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+    {
+      course: "M.A. Internation law and diplomacy",
+      school: " University of Lagos",
+      location: "Lagos, Nigeria",
+      type: "Full time",
+      date: "Sep 2021 - Dec 2021",
+    },
+  ];
+
   return (
-    <div className="lg:w-[60%] mt-44" id="about" data-aos="fade-up" data-aos-anchor="#about">
+    <div
+      className="lg:w-[60%] mt-44"
+      id="about"
+      data-aos="fade-up"
+      data-aos-anchor="#about"
+    >
       <div>
         <h1 className="text-[#42446E] text-[2.6rem] font-bold font-[poppins-extrabold]">
           About me
@@ -27,125 +80,41 @@ const About = () => {
           Work Exprience
         </h1>
         <div className="grid gap-5">
-          <div className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-[1.2rem] tracking-widest">
-                Junior Developer
-              </h1>
-              <section className="flex items-center justify-between gap-5 text-[0.8rem]">
-                <span className="flex items-center gap-1">
-                  <img src={office} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Nester Global
-                  </p>
-                </span>
-                <span className="flex items-center gap-1">
-                  <img src={location} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Lagos, Nigeria
-                  </p>
-                </span>
-              </section>
+          {experience.map((item, index) => (
+            <div
+              key={index}
+              className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <div className="flex flex-col items-start gap-3">
+                <h1 className="text-[1.2rem] tracking-widest">{item.role}</h1>
+                <section className="flex items-center justify-between gap-5 text-[0.8rem]">
+                  <span className="flex items-center gap-1">
+                    <img src={office} alt="" />
+                    <p className="font-[poppins-light] tracking-widest">
+                      {item.company}
+                    </p>
+                  </span>
+                  <span className="hidden md:flex items-center gap-1">
+                    <img src={location} alt="" />
+                    <p className="font-[poppins-light] tracking-widest">
+                      {item.location}
+                    </p>
+                  </span>
+                </section>
+              </div>
+              <div className="flex flex-col items-end gap-3">
+                <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
+                  {item.type}
+                </p>
+                <p className="flex items-center text-[0.8rem] tracking-widest">
+                  <img src={calendar} alt="" /> {item.date}
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-end gap-3">
-              <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
-                Full time
-              </p>
-              <p className="flex items-center text-[0.8rem] tracking-widest">
-                <img src={calendar} alt="" /> Sep 2021 - Dec 2021
-              </p>
-            </div>
-          </div>
-
-          <div className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-[1.2rem] tracking-widest">
-                Junior Developer
-              </h1>
-              <section className="flex items-center justify-between gap-5 text-[0.8rem]">
-                <span className="flex items-center gap-1">
-                  <img src={office} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Nester Global
-                  </p>
-                </span>
-                <span className="flex items-center gap-1">
-                  <img src={location} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Lagos, Nigeria
-                  </p>
-                </span>
-              </section>
-            </div>
-            <div className="flex flex-col items-end gap-3">
-              <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
-                Full time
-              </p>
-              <p className="flex items-center text-[0.8rem] tracking-widest">
-                <img src={calendar} alt="" /> Sep 2021 - Dec 2021
-              </p>
-            </div>
-          </div>
-
-          <div className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-[1.2rem] tracking-widest">
-                Junior Developer
-              </h1>
-              <section className="flex items-center justify-between gap-5 text-[0.8rem]">
-                <span className="flex items-center gap-1">
-                  <img src={office} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Nester Global
-                  </p>
-                </span>
-                <span className="flex items-center gap-1">
-                  <img src={location} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Lagos, Nigeria
-                  </p>
-                </span>
-              </section>
-            </div>
-            <div className="flex flex-col items-end gap-3">
-              <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
-                Full time
-              </p>
-              <p className="flex items-center text-[0.8rem] tracking-widest">
-                <img src={calendar} alt="" /> Sep 2021 - Dec 2021
-              </p>
-            </div>
-          </div>
-
-          <div className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-[1.2rem] tracking-widest">
-                Junior Developer
-              </h1>
-              <section className="flex items-center justify-between gap-5 text-[0.8rem]">
-                <span className="flex items-center gap-1">
-                  <img src={office} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Nester Global
-                  </p>
-                </span>
-                <span className="flex items-center gap-1">
-                  <img src={location} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Lagos, Nigeria
-                  </p>
-                </span>
-              </section>
-            </div>
-            <div className="flex flex-col items-end gap-3">
-              <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
-                Full time
-              </p>
-              <p className="flex items-center text-[0.8rem] tracking-widest">
-                <img src={calendar} alt="" /> Sep 2021 - Dec 2021
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <div className="mt-10">
@@ -153,35 +122,42 @@ const About = () => {
           Education
         </h1>
         <div className="grid gap-5">
-          <div className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]">
-            <div className="flex flex-col items-start gap-3">
-              <h1 className="text-[1.2rem] tracking-widest">
-                M.A. Internation law and diplomacy
-              </h1>
-              <section className="flex items-center justify-between gap-5 text-[0.8rem]">
-                <span className="flex items-center gap-1">
-                  <img src={office} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    University of Lagos
-                  </p>
-                </span>
-                <span className="flex items-center gap-1">
-                  <img src={location} alt="" />
-                  <p className="font-[poppins-light] tracking-widest">
-                    Lagos, Nigeria
-                  </p>
-                </span>
-              </section>
+          {education.map((item, index) => (
+            <div
+              key={index}
+              className="text-[#666666] pb-5 flex justify-between items-center border-b-[1px] border-b-[#ebeaed]"
+              data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <div className="flex flex-col items-start gap-3">
+                <h1 className="text-[1.2rem] tracking-widest">{item.course}</h1>
+                <section className="flex items-center justify-between gap-5 text-[0.8rem]">
+                  <span className="flex items-center gap-1">
+                    <img src={office} alt="" />
+                    <p className="font-[poppins-light] tracking-widest">
+                      {item.school}
+                    </p>
+                  </span>
+                  <span className="md:flex items-center gap-1 hidden">
+                    <img src={location} alt="" />
+                    <p className="font-[poppins-light] tracking-widest">
+                      {item.location}
+                    </p>
+                  </span>
+                </section>
+              </div>
+              <div className="flex flex-col items-end gap-3">
+                <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
+                  {item.type}
+                </p>
+                <p className="flex items-center text-[0.8rem] tracking-widest">
+                  <img src={calendar} alt="" /> {item.date}
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-end gap-3">
-              <p className="rounded-3xl bg-[#D7FFE0] text-[#018C0F] px-5 text-[0.8rem] py-1 w-fit ">
-                Full time
-              </p>
-              <p className="flex items-center text-[0.8rem] tracking-widest">
-                <img src={calendar} alt="" /> Sep 2021 - Dec 2021
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

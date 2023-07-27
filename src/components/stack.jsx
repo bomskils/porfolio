@@ -22,7 +22,14 @@ const Stack = () => {
       </p>
       <div className="mx-auto w-[70%] grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-20 lg:mt-48 gap-20">
         {images.map((image, index) => (
-          <img key={index} src={image} alt="" />
+          <img
+            key={index}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+            src={image}
+            alt=""
+          />
         ))}
       </div>
     </div>

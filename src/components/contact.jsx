@@ -1,15 +1,22 @@
-import { Button, Card, Col, Form, Input, Row } from "antd";
+import { Button, Card, Col, Input, Row } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { SendOutlined } from "@ant-design/icons";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
+import EmailResponseModal from "./Email-response-modal";
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(null);
+  // Initialize the useForm hook
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState(0);
 
   const sendMail = (e) => {
-    // e.preventDefault();
-    emailjs.sendForm(
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
         "service_gkc4z8k",
         "template_h7r3ywz",
         form.current,
@@ -18,9 +25,15 @@ const Contact = () => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
+          setLoading(false);
+          setStatus(response.status);
+          setOpen(true);
         },
         function (error) {
           console.log("FAILED...", error);
+          setLoading(false);
+          setStatus(500);
+          setOpen(true);
         }
       );
   };
@@ -39,29 +52,20 @@ const Contact = () => {
         </span>
       </h2>
       <Card>
-        <Form
-          layout="vertical"
-          labelCol={{ span: 24 }}
-          wrapperCol={{ span: 24 }}
-          className="lg:w-1/2 mx-auto"
-          ref={form}
-          onSubmit={(e) => sendMail(e.preventDefault)}
-        >
+        <EmailResponseModal open={open} setOpen={setOpen} status={status} />
+        <form className="lg:w-1/2 mx-auto" ref={form} onSubmit={sendMail}>
           <Row style={{ width: "100%" }}>
-            <Col span={24}>
-              <Form.Item label="Name" name="to_name">
-                <Input className="py-2" name="to_name" />
-              </Form.Item>
+            <Col span={24} className="mb-5">
+              <label htmlFor="name">Your Name</label>
+              <Input className="py-2 mt-2" name="to_name" required />
             </Col>
-            <Col span={24}>
-              <Form.Item label="Email" name="from_name">
-                <Input type="email" name="from_name" className="py-2" />
-              </Form.Item>
+            <Col span={24} className="mb-5">
+              <label htmlFor="email">Your Email</label>
+              <Input type="email" name="from_name" className="py-2 mt-2" />
             </Col>
-            <Col span={24}>
-              <Form.Item label="Message" name="message">
-                <TextArea name="message" rows={10} />
-              </Form.Item>
+            <Col span={24} className="mb-5">
+              <label htmlFor="message">Meesage</label>
+              <TextArea name="message" rows={10} className="mt-2" />
             </Col>
             <Col span={24}>
               <Button
@@ -70,12 +74,13 @@ const Contact = () => {
                 className="bg-[#42446E] flex items-center justify-center py-5"
                 block
                 htmlType="submit"
+                loading={loading}
               >
                 Send
               </Button>
             </Col>
           </Row>
-        </Form>
+        </form>
       </Card>
     </div>
   );
