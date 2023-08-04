@@ -6,18 +6,18 @@ import calendar from "../images/calendar.svg";
 const About = () => {
   const experience = [
     {
-      role: "Junior Developer",
-      company: "Nestar Global",
+      role: "Risk Analyst",
+      company: "Nester Global",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2021 - Dec 2021",
+      date: "Aug 2021 - Till date",
     },
     {
-      role: "Junior Developer",
-      company: "Nestar Global",
+      role: "Payment Support",
+      company: "Dlight Solar",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2021 - Dec 2021",
+      date: "Aug 2020 - march 2021",
     },
     {
       role: "Junior Developer",
@@ -34,21 +34,21 @@ const About = () => {
       school: " University of Lagos",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2021 - Dec 2021",
+      date: "Sep 2020",
     },
     {
-      course: "M.A. Internation law and diplomacy",
-      school: " University of Lagos",
+      course: "B.A. History and Internation Relations",
+      school: " Lagos State University",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2021 - Dec 2021",
+      date: "2018",
     },
     {
-      course: "M.A. Internation law and diplomacy",
-      school: " University of Lagos",
+      course: "Diploma in Law",
+      school: " Lagos State University",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2021 - Dec 2021",
+      date: "2012",
     },
   ];
 
