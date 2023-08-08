@@ -37,7 +37,7 @@ const About = () => {
       date: "Sep 2020",
     },
     {
-      course: "B.A. History and Internation Relations",
+      course: "B.A. History and International Relations",
       school: " Lagos State University",
       location: "Lagos, Nigeria",
       type: "Full time",
@@ -77,7 +77,7 @@ const About = () => {
       </div>
       <div className="mt-10">
         <h1 className="text-[#42446E] text-[2.6rem] font-bold mb-7 font-[poppins-extrabold]">
-          Work Exprience
+          Work Experience
         </h1>
         <div className="grid gap-5">
           {experience.map((item, index) => (

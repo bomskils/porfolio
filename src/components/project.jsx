@@ -11,8 +11,8 @@ const Project = () => {
       img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
       livePreviewUrl: "",
       viewCodeUrl: "https://github.com/bomskils/facebook/tree/main/facebook2",
-      title: "Count down timer",
-      description: "This is an application that is used for a timer purpose",
+      title: "Facebook login page",
+      description: "This is a copy of facebook login page",
       techStack: "HTML, CSS, JavaScript, Git, GitHub, VScode",
     },
     {
