@@ -4,13 +4,15 @@ import Meta from "antd/es/card/Meta";
 import React from "react";
 import chain from "../images/chain.svg";
 import faceb from "../images/faceb.png";
+import tim from "../images/timer.png";
+import quiz from "../images/quiz-app.png";
 import github from "../images/fill.svg";
 
 
 const Project = () => {
   const projects = [
     {
-      img: <img src={faceb}/>,
+      img: faceb,
       livePreviewUrl: "",
       viewCodeUrl: "https://github.com/bomskils/facebook/tree/main/facebook2",
       title: "Facebook login page",
@@ -18,7 +20,7 @@ const Project = () => {
       techStack: "HTML, CSS, JavaScript, Git, GitHub, VScode",
     },
     {
-      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+      img: tim,
       livePreviewUrl: "",
       viewCodeUrl: "https://github.com/bomskils/facebook/tree/main/facebook2",
       title: "Count down timer",
@@ -26,11 +28,11 @@ const Project = () => {
       techStack: "HTML, CSS, JavaScript, Git, GitHub, VScode",
     },
     {
-      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+      img: quiz,
       livePreviewUrl: "",
       viewCodeUrl: "https://github.com/bomskils/facebook/tree/main/facebook2",
-      title: "Count down timer",
-      description: "This is an application that is used for a timer purpose",
+      title: "Quiz Application",
+      description: "This is a quiz application designed to present users with a series of questions and answer",
       techStack: "HTML, CSS, JavaScript, Git, GitHub, VScode",
     },
     {
@@ -87,7 +89,7 @@ const Project = () => {
             <Card
               hoverable
               style={{ width: 350 }}
-              cover={<img alt="example" src={project.img} />}
+              cover={<img alt="example" src={project.img} className="card-image" />}
               actions={[
                 <button
                   onClick={() =>
@@ -95,7 +97,7 @@ const Project = () => {
                   }
                   className="flex items-center gap-1 ml-2"
                 >
-                  <img src={chain} alt="" />
+                  <img  src={chain} alt=""  />
                   Live preview
                 </button>,
                 <button

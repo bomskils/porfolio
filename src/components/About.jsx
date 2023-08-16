@@ -64,11 +64,7 @@ const About = () => {
           About me
         </h1>
         <p className="text-justify leading-loose text-[#666666]">
-          As a highly motivated and detail-oriented junior developer, I am
-          actively seeking an internship position to gain practical experience
-          and contribute to a dynamic development team. My passion for software
-          development drives me to continually learn and apply cutting-edge
-          technologies to develop innovative solutions. Proficient in HTML, CSS,
+          An innovative junior developer with a background in quality assurance and verification. Passionate about software development and dedicated to staying up-to-date with the latest industry trends and technologies. Eager to leverage technical expertise and creativity to contribute to dynamic development projects and drive user engagement. Proficient in HTML, CSS,
           JavaScript, and React, I have built a solid foundation that enables me
           to excel in collaborative and fast-paced environments. I am genuinely
           excited to bring my skills and enthusiasm to the team, actively
