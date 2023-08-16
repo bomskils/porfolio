@@ -3,16 +3,18 @@ import { Card, Col, Row } from "antd";
 import Meta from "antd/es/card/Meta";
 import React from "react";
 import chain from "../images/chain.svg";
+import faceb from "../images/faceb.png";
 import github from "../images/fill.svg";
+
 
 const Project = () => {
   const projects = [
     {
-      img: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+      img: <img src={faceb}/>,
       livePreviewUrl: "",
       viewCodeUrl: "https://github.com/bomskils/facebook/tree/main/facebook2",
       title: "Facebook login page",
-      description: "This is a copy of facebook login page",
+      description: "This is an imitation of the Facebook login page, with the intention of reproducing its appearance",
       techStack: "HTML, CSS, JavaScript, Git, GitHub, VScode",
     },
     {

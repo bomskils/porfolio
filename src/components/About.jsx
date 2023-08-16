@@ -6,7 +6,7 @@ import calendar from "../images/calendar.svg";
 const About = () => {
   const experience = [
     {
-      role: "Risk Analyst",
+      role: "Quality Assurance Specialist",
       company: "Nester Global",
       location: "Lagos, Nigeria",
       type: "Full time",
@@ -19,22 +19,22 @@ const About = () => {
       type: "Full time",
       date: "Aug 2020 - march 2021",
     },
-    {
-      role: "Junior Developer",
-      company: "Nestar Global",
-      location: "Lagos, Nigeria",
-      type: "Full time",
-      date: "Sep 2021 - Dec 2021",
-    },
+    // {
+    //   role: "Junior Developer",
+    //   company: "Nestar Global",
+    //   location: "Lagos, Nigeria",
+    //   type: "Full time",
+    //   date: "Sep 2021 - Dec 2021",
+    // },
   ];
 
   const education = [
     {
-      course: "M.A. Internation law and diplomacy",
-      school: " University of Lagos",
+      course: "Software Development ",
+      school: " SAIL INNOVATIVE LAB",
       location: "Lagos, Nigeria",
       type: "Full time",
-      date: "Sep 2020",
+      date: "Aug 2023",
     },
     {
       course: "B.A. History and International Relations",
